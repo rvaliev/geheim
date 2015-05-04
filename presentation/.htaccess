@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^http://geheim:8888/.*$ [NC]
+RewriteRule ^.* /index.php [L,R]

@@ -1,6 +1,6 @@
 <?php
 
-require_once('../data/UserDAO.class.php');
+require_once('data/UserDAO.class.php');
 
 class UserService
 {
@@ -22,6 +22,5 @@ class UserService
 }
 
 
-$obj = new UserService();
-$obj->userValidation('admin', '123456');
+
 

@@ -1,7 +1,7 @@
 <?php
 
-require_once('../data/DBConnect.class.php');
-require_once('../entities/User.class.php');
+require_once('data/DBConnect.class.php');
+require_once('entities/User.class.php');
 
 
 
