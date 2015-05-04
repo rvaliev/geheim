@@ -23,7 +23,7 @@ class UserDAO
     }
 
 
-    public function check($login = 'admin', $password = '123456')
+    public function getData($login, $password)
     {
         self::connectToDB();
         $this->sql = "SELECT * FROM users WHERE login = ? AND password = ?";
@@ -36,16 +36,19 @@ class UserDAO
             $this->handler = null;
             $this->query->closeCursor();
 
-            foreach ($this->result as $row) {
+//            $this->lijst = new User($this->result[0]['id'], $this->result[0]['login'], $this->result[0]['password']);
 
-            }
+            return $this->result;
 
-            $this->lijst = new User();
-
-            return $this->lijst;
         } catch (Exception $e) {
             echo "Error: Ошибка с запросом";
             return false;
         }
     }
 }
+
+/*$obj = new UserDAO();
+echo "<pre>";
+print_r($aa = $obj->check());
+echo "</pre>";
+echo $aa->getId();*/
